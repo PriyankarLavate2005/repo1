@@ -5,15 +5,14 @@ pipeline {
             steps {
                 script {
                     echo 'hello Priyanka'
-                    echo "hello Pooja how are you"
-
+                    echo 'hello Pooja, how are you?'
                 }
             }
         }
         stage('Take approval'){
             steps{
-                timeout(time:1,unit:minutes){
-                    input message :"do you want to procced" ,ok='procced'
+                timeout(time: 1, unit: 'minutes') {
+                    input message: 'Do you want to proceed?', ok: 'Proceed'
                 }
             }
         }
