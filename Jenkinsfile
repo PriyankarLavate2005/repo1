@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit
+
 pipeline {
     agent any
     stages {
@@ -11,7 +13,7 @@ pipeline {
         }
         stage('Take approval'){
             steps{
-                timeout(time: 1, unit: 'minutes') {
+                timeout(time: 1, unit: TimeUnit.MINUTES) {
                     input message: 'Do you want to proceed?', ok: 'Proceed'
                 }
             }
