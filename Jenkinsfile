@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                     echo 'hello Priyanka'
+                    echo "hello Pooja how are you"
                 }
             }
         }
